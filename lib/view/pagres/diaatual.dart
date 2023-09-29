@@ -18,7 +18,6 @@ class _DiaAtualState extends State<DiaAtual> {
   Widget build(BuildContext context) {
     var dadosatual = listpharmacy
         .where((element) => element['iddayweek'] == dataAtual.weekday);
-    var dados;
     return Scaffold(
       body: Column(
         children: [
