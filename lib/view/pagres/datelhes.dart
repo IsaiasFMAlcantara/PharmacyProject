@@ -1,4 +1,5 @@
 import 'package:coworking/custom/customText.dart';
+import 'package:coworking/view/pagres/agenda.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/custom/appbarCustom.dart';
 import 'package:coworking/custom/drawerCustom.dart';
@@ -35,9 +36,28 @@ class _PageDatailsState extends State<PageDatails> {
                 'Endereço: ${dadosatual[0]['Endereço']['rua']}, ${dadosatual[0]['Endereço']['numero']}, ${dadosatual[0]['Endereço']['bairro']}, ${dadosatual[0]['Endereço']['cidade']}'),
             Text('Horas: ${dadosatual[0]['Horas']}'),
             Text('Telefone: ${dadosatual[0]['Telefone']}'),
+            SizedBox(
+              height: 25,
+            ),
             Row(
-              children: [],
-            )
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/');
+                  },
+                  child: Column(
+                    children: [Icon(Icons.arrow_back), Text('Voltar')],
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Column(
+                    children: [Icon(Icons.map_outlined), Text('Rotas')],
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
