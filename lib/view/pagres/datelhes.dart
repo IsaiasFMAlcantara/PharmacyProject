@@ -35,6 +35,9 @@ class _PageDatailsState extends State<PageDatails> {
                 'Endereço: ${dadosatual[0]['Endereço']['rua']}, ${dadosatual[0]['Endereço']['numero']}, ${dadosatual[0]['Endereço']['bairro']}, ${dadosatual[0]['Endereço']['cidade']}'),
             Text('Horas: ${dadosatual[0]['Horas']}'),
             Text('Telefone: ${dadosatual[0]['Telefone']}'),
+            Row(
+              children: [],
+            )
           ],
         ),
       ),
