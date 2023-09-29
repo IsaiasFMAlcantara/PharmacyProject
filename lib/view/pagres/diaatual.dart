@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
+import 'datelhes.dart';
+
+import 'datelhes.dart';
 
 class DiaAtual extends StatefulWidget {
   const DiaAtual({Key? key}) : super(key: key);
@@ -33,11 +36,18 @@ class _DiaAtualState extends State<DiaAtual> {
                 ),
                 itemCount: dadosatual.length,
                 itemBuilder: (context, index) {
+                  final idpharmacy = dadosatual.toList()[index]["idFarmacia"];
                   return Card(
                     child: ListTile(
-                      title: Text('${dadosatual.toList()[index]["Farmacia"]}'),onTap: (){
-
-                    },
+                      title: Text('${dadosatual.toList()[index]["Farmacia"]}'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PageDatails(pharmacy: idpharmacy),
+                          ),
+                        );
+                      },
                     ),
                   );
                 },
