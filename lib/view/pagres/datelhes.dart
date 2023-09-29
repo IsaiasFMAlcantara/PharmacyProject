@@ -1,3 +1,4 @@
+import 'package:coworking/custom/customText.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/custom/appbarCustom.dart';
 import 'package:coworking/custom/drawerCustom.dart';
@@ -21,10 +22,21 @@ class _PageDatailsState extends State<PageDatails> {
         .toList();
 
     return Scaffold(
-      appBar: CustomAppBar(title: "${dadosatual[0]['Farmacia']}"),
+      appBar: CustomAppBar(title: "Detalhes Farmácia"),
       drawer: CustomDrawer(),
-      body: Column(
-        children: [],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+        child: Column(
+          children: [
+            CustomText(title: '${dadosatual[0]['Farmacia']}'),
+            Text('Opções de serviço: ${dadosatual[0]['servico']}'),
+            Text('Localizado em: ${dadosatual[0]['Localizado']}'),
+            Text(
+                'Endereço: ${dadosatual[0]['Endereço']['rua']}, ${dadosatual[0]['Endereço']['numero']}, ${dadosatual[0]['Endereço']['bairro']}, ${dadosatual[0]['Endereço']['cidade']}'),
+            Text('Horas: ${dadosatual[0]['Horas']}'),
+            Text('Telefone: ${dadosatual[0]['Telefone']}'),
+          ],
+        ),
       ),
     );
   }
