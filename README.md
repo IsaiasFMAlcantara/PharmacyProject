@@ -1,4 +1,4 @@
-# coworking
+# Project Pharmacy
 
 ### A new Flutter project.
 
