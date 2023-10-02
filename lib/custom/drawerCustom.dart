@@ -31,6 +31,38 @@ class _CustomDrawerState extends State<CustomDrawer> {
               },
             ),
           ),
+          Card(
+            color: ColorsPharmacy.buttomdrawerColor,
+            child: ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: ColorsPharmacy.icondrawerColor,
+              ),
+              title: Text(
+                'Configurações',
+                style: TextStyle(color: ColorsPharmacy.textdrawerColor),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/');
+              },
+            ),
+          ),
+          Card(
+            color: ColorsPharmacy.buttomdrawerColor,
+            child: ListTile(
+              leading: Icon(
+                Icons.location_city,
+                color: ColorsPharmacy.icondrawerColor,
+              ),
+              title: Text(
+                'Cidade',
+                style: TextStyle(color: ColorsPharmacy.textdrawerColor),
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed('/');
+              },
+            ),
+          ),
         ],
       ),
     );

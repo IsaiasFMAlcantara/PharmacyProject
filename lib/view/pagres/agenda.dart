@@ -3,6 +3,8 @@ import 'package:coworking/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
 
+import 'datelhes.dart';
+
 class PageAgendaPharmacy extends StatefulWidget {
   const PageAgendaPharmacy({super.key});
 
@@ -15,8 +17,6 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
 
   @override
   Widget build(BuildContext context) {
-    var dadosatual = listpharmacy
-        .where((element) => element['iddayweek'] == dataAtual.weekday);
     return Scaffold(
       body: Column(
         children: [
@@ -44,7 +44,7 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
                       children: [
                         ListTile(
                           title: Text(
-                            '${listweekday['dayweek']} - Feira',
+                            '${listweekday['dayweek']}',
                             style:
                                 TextStyle(color: ColorsPharmacy.textlistColor),
                           ),
@@ -67,6 +67,14 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
                                   child: Card(
                                     child: ListTile(
                                       title: Text(subpharmacylist['Farmacia']),
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => PageDatails(pharmacy: subpharmacylist['idFarmacia']),
+                                            ),
+                                          );
+                                        }
                                     ),
                                   ),
                                 );

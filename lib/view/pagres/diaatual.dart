@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
 import 'datelhes.dart';
 
-import 'datelhes.dart';
-
 class DiaAtual extends StatefulWidget {
   const DiaAtual({Key? key}) : super(key: key);
 
