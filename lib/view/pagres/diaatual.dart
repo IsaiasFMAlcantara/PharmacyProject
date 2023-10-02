@@ -1,3 +1,4 @@
+import 'package:coworking/custom/customCard.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
 import 'datelhes.dart';
@@ -28,25 +29,11 @@ class _DiaAtualState extends State<DiaAtual> {
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  mainAxisSpacing: 5.0,
-                  crossAxisSpacing: 5.0,
                 ),
                 itemCount: dadosatual.length,
                 itemBuilder: (context, index) {
                   final idpharmacy = dadosatual.toList()[index]["idFarmacia"];
-                  return Card(
-                    child: ListTile(
-                      title: Text('${dadosatual.toList()[index]["Farmacia"]}'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PageDatails(pharmacy: idpharmacy),
-                          ),
-                        );
-                      },
-                    ),
-                  );
+                  return CustomCard(idpharmacy: idpharmacy);
                 },
               ),
             ),

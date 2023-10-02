@@ -1,9 +1,8 @@
+import 'package:coworking/custom/customCard.dart';
 import 'package:coworking/custom/customText.dart';
 import 'package:coworking/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
-
-import 'datelhes.dart';
 
 class PageAgendaPharmacy extends StatefulWidget {
   const PageAgendaPharmacy({super.key});
@@ -27,7 +26,6 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
           SizedBox(height: 10),
           Expanded(
             child: Container(
-              // padding: EdgeInsets.fromLTRB(left, top, right, bottom),
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: ListView.builder(
                 itemCount: WeekDay.length,
@@ -62,22 +60,8 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
                               itemCount: pharmacylist.length,
                               itemBuilder: (context, subIndex) {
                                 final subpharmacylist = pharmacylist[subIndex];
-                                return Container(
-                                  width: 150,
-                                  child: Card(
-                                    child: ListTile(
-                                      title: Text(subpharmacylist['Farmacia']),
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => PageDatails(pharmacy: subpharmacylist['idFarmacia']),
-                                            ),
-                                          );
-                                        }
-                                    ),
-                                  ),
-                                );
+                                return CustomCard(
+                                    idpharmacy: subpharmacylist['idFarmacia']);
                               },
                             ),
                           )
