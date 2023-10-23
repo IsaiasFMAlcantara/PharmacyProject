@@ -1,4 +1,5 @@
 import 'package:coworking/custom/customCard.dart';
+import 'package:coworking/custom/customText.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/back/data.dart';
 import 'datelhes.dart';
@@ -20,9 +21,9 @@ class _DiaAtualState extends State<DiaAtual> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 8),
-          Text('${DateTime.now()}'),
           SizedBox(height: 10),
+          CustomText(title: 'FARMÁCIA DE PLANTÃO HOJE',),
+          SizedBox(height: 20),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),

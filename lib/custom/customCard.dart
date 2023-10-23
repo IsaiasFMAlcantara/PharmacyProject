@@ -23,12 +23,25 @@ class _CustomCardState extends State<CustomCard> {
       width: 150,
       child: Card(
         child: ListTile(
-            title: Text('${dadosatual[0]['Farmacia']}'),
+            title: Text(
+              '${dadosatual[0]['Farmacia']}',
+              textAlign: TextAlign.justify,
+            ),
+            subtitle: Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Text('${dadosatual[0]['Horas']}'),
+                Text('${dadosatual[0]['Telefone']}'),
+              ],
+            ),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => PageDatails(pharmacy: widget.idpharmacy),
+                  builder: (context) =>
+                      PageDatails(pharmacy: widget.idpharmacy),
                 ),
               );
             }),

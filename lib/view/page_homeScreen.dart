@@ -1,5 +1,4 @@
 import 'package:coworking/custom/customText.dart';
-import 'package:coworking/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class pageHomeScreen extends StatefulWidget {
@@ -21,12 +20,14 @@ class _pageHomeScreenState extends State<pageHomeScreen> {
             child: Column(
               children: [
                 Image.network(
-                    //'https://images.freeimages.com/clg/istock/previews/1057/105788051-pharmacist-woman-with-medicine-at-counter-in-pharmacy.jpg'),
-                    'https://i.blogs.es/635f55/maps/1366_2000.jpg'),
+                  'https://firebasestorage.googleapis.com/v0/b/projeto-coworking.appspot.com/o/imagem_mapa.png?alt=media&token=de17cc97-d3fd-4f83-897d-6da69f2157f0&_gl=1*10uyvb1*_ga*NjY1ODYyNzEwLjE2OTIyODQ0MjY.*_ga_CW55HF8NVT*MTY5ODA2MzM4NC4yMC4xLjE2OTgwNjM0MDkuMzUuMC4w',
+                  width: 400,
+                  height: 600,
+                ),
                 SizedBox(
                   height: 20,
                 ),
-                CustomText(title: 'Qual farmácia vai cuidar de você hoje?')
+                CustomText(title: 'QUAL FRMÁCIA VAI CUIDAR DE VOCÊ HOJE?')
               ],
             ),
           ),

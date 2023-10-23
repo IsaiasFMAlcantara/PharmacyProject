@@ -21,9 +21,9 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
         children: [
           Padding(
             padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: CustomText(title: 'Agenda Semanal de horas das farmacias'),
+            child: CustomText(title: 'Agenda Semanal de atendimento das farmacias'),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 30),
           Expanded(
             child: Container(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -64,7 +64,10 @@ class _PageAgendaPharmacyState extends State<PageAgendaPharmacy> {
                                     idpharmacy: subpharmacylist['idFarmacia']);
                               },
                             ),
-                          )
+                          ),
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                   );

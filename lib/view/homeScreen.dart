@@ -1,8 +1,8 @@
+import 'package:coworking/custom/drawerCustom.dart';
 import 'package:coworking/view/pagres/diaatual.dart';
 import 'package:flutter/material.dart';
 import 'package:coworking/utils/colors.dart';
 import 'package:coworking/custom/appbarCustom.dart';
-import 'package:coworking/custom/drawerCustom.dart';
 import 'page_homeScreen.dart';
 import 'package:coworking/view/pagres/agenda.dart';
 
@@ -18,15 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Pharmacy App'),
-      drawer: CustomDrawer(),
+      appBar: CustomAppBar(title: 'Farm plantão'),drawer: CustomDrawer(),
       body: IndexedStack(
         index: _paginaSelecionada,
-        children: [
-          pageHomeScreen(),
-          PageAgendaPharmacy(),
-          DiaAtual()
-        ],
+        children: [pageHomeScreen(), PageAgendaPharmacy(), DiaAtual()],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _paginaSelecionada,
@@ -41,21 +36,21 @@ class _HomeScreenState extends State<HomeScreen> {
               Icons.home,
               color: ColorsPharmacy.iconstackColor,
             ),
-            label:'Home',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.format_list_numbered_rtl,
               color: ColorsPharmacy.iconstackColor,
             ),
-            label:'List Pharmacy',
+            label: 'List Pharmacy',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.list,
               color: ColorsPharmacy.iconstackColor,
             ),
-            label:'List Pharmacy Open',
+            label: 'List Pharmacy Open',
           )
         ],
       ),

@@ -15,10 +15,13 @@ class CustomText extends StatelessWidget implements PreferredSizeWidget {
       child: Text(
         title,
         style: TextStyle(
-            color: ColorsPharmacy.texthomeColor,
-            fontFamily: 'Arial',
-            fontSize: 30),
-        textAlign: TextAlign.justify,
+          color: ColorsPharmacy.texthomeColor,
+          fontFamily: 'Arial',
+          fontSize: 30,
+          fontWeight:
+              FontWeight.bold, // Adicione esta linha para definir o negrito
+        ),
+        textAlign: TextAlign.center,
       ),
     );
   }
