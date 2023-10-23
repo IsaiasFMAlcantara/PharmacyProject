@@ -31,12 +31,12 @@ class _PageDatailsState extends State<PageDatails> {
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-              Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/projeto-coworking.appspot.com/o/5afd6932892079.56979a3b6df07.jpg?alt=media&token=ae95e3b1-9c8b-49df-af2d-5bfa3470b19d&_gl=1*1i41cz5*_ga*NjY1ODYyNzEwLjE2OTIyODQ0MjY.*_ga_CW55HF8NVT*MTY5ODA3MTEzNS4yMS4xLjE2OTgwNzEyMDAuNjAuMC4w',
+              Image.asset(
+                'imagens/fachada.jpg',
                 height: 300,
               ),
               SizedBox(
-                height: 100,
+                height: 30,
               ),
               CustomText(
                 title: 'Nome: ${dadosatual[0]['Farmacia']}',
@@ -45,7 +45,6 @@ class _PageDatailsState extends State<PageDatails> {
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-
                   boxShadow: [
                     BoxShadow(
                       color: ColorsPharmacy.buttomlistColor.withOpacity(0.5),
@@ -123,7 +122,7 @@ class _PageDatailsState extends State<PageDatails> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 50,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
